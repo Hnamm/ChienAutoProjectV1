@@ -1,0 +1,26 @@
+<div class="container mt-5 container-custom">
+    <h2 class="text-center">Đăng kí</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label for="fullname">Họ và tên:</label>
+            <input type="text" class="form-control" id="fullname" name="fullname" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Số điện thoại:</label>
+            <input type="text" class="form-control" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Mật khẩu:</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <label for="confirm-password">Nhập lại mật khẩu:</label>
+            <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
+        </div>
+        <button type="submit" class="btn btn-primary register-btn">Đăng kí</button>
+    </form>
+    <div class="text-center mt-3 register-link">
+        <p>Đã có tài khoản? 
+            <a [routerLink]="['/login']">Đăng nhập</a></p>
+    </div>
+</div>

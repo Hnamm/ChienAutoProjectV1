@@ -1,0 +1,38 @@
+.product-box{
+    background-color: rgb(19, 23, 42);
+    border: 1px solid rgb(35, 39, 61);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+.product-box a{
+    text-decoration: none;
+}
+.car-name{
+    color: white;
+    
+}
+.car-image{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.car-price{
+    margin-bottom: 10px;
+}
+
+.car-rating{
+    margin-bottom: 10px;
+    color: yellow;
+}
+.car-actions{
+    display: flex;
+    justify-content: center;
+}
+.space-x{
+    margin: 0px 5px;
+}
+
+

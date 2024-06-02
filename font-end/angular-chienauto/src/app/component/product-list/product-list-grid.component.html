@@ -1,0 +1,34 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 d-flex justify-content-center" 
+                    *ngFor="let tempProduct of products">
+                    <div class="product-box">
+                        <a [routerLink]="['/products', tempProduct.id]">
+                            <img class="car-image" [src]="tempProduct.imageUrl" alt="">
+                        </a>
+                        <a [routerLink]="['/products', tempProduct.id]">
+                            <h1 class="car-name">{{ tempProduct.name }}</h1>
+                        </a>
+                        
+                        <div class="car-price"> {{ tempProduct.unitPrice | currency: 'VND' }}</div>
+                        <div class="car-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>    
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                        <div class="car-actions">
+                            <button (click)="addToFavorite(tempProduct)" class="btn btn-primary">Thêm vào mục ưa thích</button>
+                            <span class="space-x"></span>
+                            <button [routerLink]="['/loanEstimate', tempProduct.id]"  class="btn btn-primary">Dự tính khoản vay</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>

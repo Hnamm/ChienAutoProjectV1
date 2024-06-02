@@ -1,0 +1,107 @@
+.product-box {
+    background-color: rgb(19, 23, 42);
+    border: 1px solid rgb(35, 39, 61);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.product-box a {
+    text-decoration: none;
+}
+
+.car-name {
+    color: white;
+}
+
+.car-price, .car-discount, .car-price-after-discount, .car-price, .car-price-after-discount, .car-price, .car-price-after-discount, .car-price, .car-price-after-discount {
+    margin-bottom: 10px;
+}
+
+.car-rating {
+    margin-bottom: 10px;
+    color: yellow;
+}
+
+
+
+
+.product-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.car-image {
+    flex: 1;
+    max-width: 30%;
+    box-sizing: border-box;
+}
+
+.car-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.car-details {
+    flex: 2;
+    max-width: 45%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.loan-options {
+    flex: 1;
+    max-width: 25%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loan-options label {
+    margin-bottom: 5px;
+    color: white;
+}
+
+.loan-options select, 
+.loan-options input {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.select-container, .down-payment-container, .interest-rate-container {
+    display: flex;
+    align-items: center;
+}
+
+.select-container select, .down-payment-container select, .interest-rate-container select {
+    width: 60px; 
+    margin-right: 5px; 
+}
+
+.down-payment-container, .interest-rate-container {
+    display: flex;
+    align-items: center;
+}
+
+.down-payment-container input, .interest-rate-container input {
+    width: 60px;
+    margin-right: 5px;
+}
+.car-details {
+    flex: 1; 
+    max-width: 66%; 
+    box-sizing: border-box; 
+    display: flex; 
+    flex-direction: column; 
+    
+}
+
+.car-actions {
+    margin-top: 10px; 
+}
+

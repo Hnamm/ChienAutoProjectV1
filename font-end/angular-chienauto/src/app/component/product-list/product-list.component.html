@@ -1,0 +1,19 @@
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th></th>
+            <th>Tên sản phẩm</th>
+            <th>Giá </th>
+            <th>Số lượng còn trong kho</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tempProduct of products">
+            <td> <img src="{{ tempProduct.imageUrl }}" alt="" height="50"> </td>
+            <td>{{ tempProduct.name }}</td>
+            <td>{{ tempProduct.unitPrice | currency: "USD" }}</td>
+            <td>{{ tempProduct.unitsInStock }}</td>
+        </tr>
+    </tbody>
+</table>

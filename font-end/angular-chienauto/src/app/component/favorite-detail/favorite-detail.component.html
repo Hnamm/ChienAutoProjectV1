@@ -1,0 +1,30 @@
+<div *ngFor="let item of favoriteItems">
+    <div class="product-box">
+
+        <div class="car-image">
+            <img src="{{ item.imageUrl}}" alt="">
+        </div>
+        <div class="car-details">
+            <h1 class="car-name">
+                <p>Tên xe: {{ item.name }}</p>
+            </h1>
+            <p class="car-price">Giá: {{ item.unitPrice | currency: 'USD' }}</p>
+            <div class="car-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+            </div>
+
+            <div class="car-actions">
+                <button (click)="removeFavorite(item)" class="btn btn-primary">Xóa khỏi mục ưa thích</button>
+                <span class="space-x"></span>
+                <a href="#" class="btn btn-primary">Dự tính khoản vay</a>
+            </div>
+        </div>
+
+       
+    </div>
+</div>
+<a routerLink="/products" class="mt-5">Quay lại trang chủ</a>

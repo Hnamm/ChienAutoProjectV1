@@ -1,0 +1,59 @@
+<div class="product-box">
+    <div *ngIf="product" class="product-content">
+        <div class="car-image">
+            <img src="{{ product.imageUrl }}" alt="">
+        </div>
+        <div class="car-details">
+            <h1 class="car-name"><p>Tên xe: {{ product.name }}</p></h1>
+            <p class="car-price">Giá gốc: {{ product.unitPrice | currency: 'VND' }}</p>
+            <p class="car-discount">Ưu đãi: 1%</p>
+            <p class="car-price-after-discount">Giá sau ưu đãi: {{ priceAfterDiscount | currency: 'VND' }}</p>
+            <p>Số tiền trả trước: {{ soTienTraTruoc | currency: 'VND' }}</p>
+            <p>Số tiền vay: {{ soTienVay | currency: 'VND' }}</p>
+            <p>Lãi suất:  {{interestRate}} %</p>
+            <p>Số tiền lãi: {{ soTienLai | currency: 'VND' }}</p>
+            <p>Tổng tiền vay và lãi: {{ tongTien | currency: 'VND' }}</p>
+        </div>
+        <div class="loan-options">
+            <label for="loan-duration">Thời gian vay:</label>
+            <div class="select-container" >
+                <select id="loan-duration" [(ngModel)] = "loanDuration" (change)="updateLoanDuration(loanDuration)">
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                </select>
+                <span>tháng</span>
+            </div>
+            
+            <label for="down-payment">Phần trăm trả trước:</label>
+            <div class="down-payment-container">
+                <select id="down-payment" [(ngModel)]="downPayment" (change)="updateDownPayment(downPayment)">
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="75">75</option>
+                </select>
+                <span>%</span>
+                <!-- <input type="number" id="down-payment" [(ngModel)]="downPayment" min="0" max="100" step="1" > % -->
+            </div>
+            <label for="interest-rate">Lãi suất:</label>
+            <div class="interest-rate-container">
+                <select id="interest-rate" [(ngModel)]="interestRate" (change)="updateInterestRate(interestRate)">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                </select>
+                <span>%</span>
+                <!-- <input type="number" id="interest-rate" [(ngModel)]="interestRate" min="0" max="100" step="0.1" > % -->
+            </div> 
+            <div class="car-actions">
+                <button class="btn btn-primary" [routerLink]="['/loanEstimate', product.id, 'table']" (click)="onCalculateLoan()">
+                    <span>Tải lịch vay chi tiết</span><br>
+                </button>
+                
+            </div>
+        </div>
+
+    </div>
+    <a routerLink="/products" class="mt-5">Quay lại trang chủ</a>
+</div>

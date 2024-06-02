@@ -1,0 +1,37 @@
+<!-- 
+<div class="detail-section">
+    <div class="container-fluid">
+        <img src="{{ product.imageUrl }}" alt="">
+        <p >{{ product.name }}</p>
+    </div>
+</div> -->
+<div class="product-box">
+    <div *ngIf="product" class="product-content">
+        <div class="car-image">
+            <img src="{{ product.imageUrl}}" alt="">
+        </div>
+        <div class="car-details">
+            <h1 class="car-name"><p>Tên xe: {{ product.name }}</p></h1>
+            <p class="car-price">Giá: {{ product.unitPrice | currency: 'VND' }}</p>
+            <p>Mô tả: {{ product.description }}</p>
+            <p>Tốc độ tối đa: {{ product.maxSpeed }} (km/h) (dự kiến)</p>
+            <p>Quãng đường trong 1 lần sạc: {{ product.roadOneTime }} (km)</p>
+            <p>Thời gian sạc đầy pin: {{ product.batteryTime }} (phút) (dự kiến)</p>
+            <div class="car-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+            </div>
+
+            <div class="car-actions">
+                <button (click)="addToFavorite(product)" class="btn btn-primary">Thêm vào mục ưa thích</button>
+                <span class="space-x"></span>
+                <button [routerLink]="['/loanEstimate', product.id]"  class="btn btn-primary">Dự tính khoản vay</button>
+            </div>
+        </div>
+
+    </div>
+    <a routerLink="/products" class="mt-5">Quay lại trang chủ</a>
+</div>

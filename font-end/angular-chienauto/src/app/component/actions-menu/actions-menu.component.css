@@ -1,0 +1,10 @@
+
+.nav-item:hover .nav-link {
+    color: red; 
+}
+.nav-link {
+    color: white;
+    font-size: 20px;
+    margin-left: 30px; /* Điều chỉnh khoảng cách giữa các nút điều hướng */
+    padding: 8px 16px;
+}

@@ -1,0 +1,12 @@
+<li class="nav-item">
+    <a routerLinkActive="active-link" class="nav-link">Danh Mục</a>
+    <div class="nav-danhmuc nav-menu">
+        <ul>
+            <li *ngFor="let productCategory of productCategories">
+                <a [routerLink]="['/productCategory', productCategory.id, 'products']" routerLinkActive="active-link">
+                    {{ productCategory.category_name }}
+                </a>
+            </li>
+        </ul>
+    </div>  
+</li>

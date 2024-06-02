@@ -1,0 +1,38 @@
+nav {
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+.nav-item .nav-link{
+    color: white;
+    font-size: 20px;
+    margin-right: 30px;
+    padding: 8px 16px;
+}
+
+.nav-item .nav-link.active{
+    background-color: rgb(127, 68, 255) !important;
+    color: white;
+    border-radius: 18px;
+}
+
+.intro-section{
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    
+}
+.nav-menu{
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    padding: 10px;
+}
+ .nav-item:hover .nav-link {
+    color: red; 
+}
+.nav-item:hover .nav-menu {
+    display: block;
+    
+}
+
