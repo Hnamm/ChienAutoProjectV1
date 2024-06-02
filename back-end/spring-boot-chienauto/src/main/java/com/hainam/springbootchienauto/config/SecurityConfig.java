@@ -48,14 +48,15 @@ public class SecurityConfig {
         http
                 .httpBasic(AbstractHttpConfigurer::disable)
                 .csrf(AbstractHttpConfigurer::disable)
-                .formLogin(form ->
-                        form
-                                .loginPage("/api/login")//url cho form login, không cần viết controller, chỉ cần viết form
-                                .usernameParameter("phone") //name của input nhập phone
-                                .passwordParameter("password")//name của input password
-                                .permitAll()
-                                .defaultSuccessUrl("/home")//url mặc định khi login thành công
-                        )
+//                .formLogin(form ->
+//                        form
+//                                .loginPage("/api/login")//url cho form login, không cần viết controller, chỉ cần viết form
+//                                .usernameParameter("phone") //name của input nhập phone
+//                                .passwordParameter("password")//name của input password
+//                                .permitAll()
+//                                .defaultSuccessUrl("/home")//url mặc định khi login thành công
+//                        )
+                .formLogin(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth->
                         auth
                                 .requestMatchers("/home").permitAll()
